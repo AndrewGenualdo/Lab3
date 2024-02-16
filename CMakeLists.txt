@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Lab3
         lab3.cpp
-        student.cpp)
+        student.cpp
+        main.cpp)
