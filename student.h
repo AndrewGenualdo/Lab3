@@ -60,14 +60,14 @@ class Student
       friend ostream& operator<<(ostream& ostream, const Student& obj);
       friend ofstream& operator<<(ofstream& ofstream, const Student& obj);
       friend istream& operator>>(istream& istream, Student& obj);
-      friend ifstream operator>>(ifstream& ifstream, Student& obj);
+      friend ifstream& operator>>(ifstream& ifstream, Student& obj);
 
       bool operator==(string id);
       friend bool operator==(string id, const Student& obj);
       bool operator==(const Student& rhs);
 
       bool operator!=(string id);
-      friend bool operator==(string id, const Student& obj);
+      friend bool operator!=(string id, const Student& obj);
       bool operator!=(const Student& rhs);
 
       Student operator=(const Student& rhs);
@@ -77,6 +77,11 @@ class Student
 
       int operator+(int rhs);
       friend int operator+(int credit, const Student& rhs);
+      double operator+(double rhs);
+      friend double operator+(double gpa, const Student& rhs);
+
+      double operator-(int rhs);
+      friend double operator-(int credit, const Student& rhs);
       double operator-(double rhs);
       friend double operator-(double gpa, const Student& rhs);
 };
